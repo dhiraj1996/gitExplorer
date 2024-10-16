@@ -35,8 +35,11 @@ const SearchUser = () => {
   useEffect(() => {
     if (attempts <= 0) {
       setErrorMsg("Too many attempts, REDIRECTING...");
+      setTimeout(()=>{
+        navigate("/");
+      }, 2000)
     }
-  }, [attempts]);
+  }, [attempts, navigate]);
   return (
     <>
       <h3>Search User</h3>

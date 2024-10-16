@@ -6,7 +6,7 @@ const Users = () => {
   //State management
   const [gitUsers, setGitUsers] = useState([]);
   const navigate = useNavigate();
-
+  // users?since=XXXX
   const getGitUsers = async () => {
     const response = await axios.get("https://api.github.com/users?since=XXXX");
     console.log(response.data);

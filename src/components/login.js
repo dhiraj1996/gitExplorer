@@ -10,7 +10,7 @@ const Login = ({ setIsLogged, setUsername }) => {
   const navigate = useNavigate();
 
   const dummyUserObject = {
-    username: "Kolosafo",
+    username: "Dhiraj1996",
     password: "12345",
   };
   const handleLogin = (e) => {

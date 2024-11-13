@@ -8,8 +8,14 @@ import Navbar from "./components/navbar"
 import NotFound from "./components/notFound";
 import UserProfile from "./components/userProfile";
 import SearchUser from "./components/searchUser";
+import Login from "./components/login";
+import AuthProfile from "./components/authProfile";
+import { useState } from "react";
 
 function App() {
+  const [username, setUsername] = useState("");
+  const [isLogged, setIsLogged] = useState(false);
+
   return (
     <div className="App">
       <Routes>
@@ -19,6 +25,8 @@ function App() {
           <Route path="/users" element={<Users/>} />
           <Route path="/users/user/:username" element={<UserProfile/>} />
           <Route path="/search" element={<SearchUser />}/>
+          <Route path="/login" element={<Login setUsername={setUsername} setIsLogged={setIsLogged}/>} />
+          <Route path="/authProfile" element={<AuthProfile username={username}/>} />
         </Route>
         <Route path="*" element={<NotFound/>} />
         
